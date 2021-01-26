@@ -1,5 +1,7 @@
 # polybar-yeelight
-A [Polybar](https://github.com/jaagr/polybar) module to control your [light](https://www.mi.com/global/smartlamp).
+A [Polybar](https://github.com/jaagr/polybar) module to control your [Mi LED Desk Lamp](https://www.mi.com/global/smartlamp).
+May work with all [YeeLight](YeeLight) compatible lamp.
+
 
 ### Dependencies 
 
@@ -7,13 +9,16 @@ A [Polybar](https://github.com/jaagr/polybar) module to control your [light](htt
 pip install yeelight
 ```
 
-*****Font NerdFont** - default icon font
+***Font NerdFont*** - default icon font
 
 ### Installation
 
 ```sh
 cd ~/.config/polybar/scripts/polybar-yeelight/
 wget https://raw.githubusercontent.com/superbunny54/polybar-yeelight/main/lamp.py
+```
+put your the ip address of your lamp in lamp.py
+```sh
 chmod +x lamp.py
 ```
 
