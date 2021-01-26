@@ -4,10 +4,16 @@ import sys
 from yeelight import *
 import time
 
-
 # This function get the propreties of your lamp
 def Get(argument):
-    prop = Bulb.get_properties()
+    prop = []
+    try:
+        prop = Bulb.get_properties()
+    except BulbException:
+        print("quota exceeded")
+        exit()
+    while not prop:
+        time.sleep(0.1)
     return (prop[argument])
 
 
@@ -71,10 +77,9 @@ def CtMinus():
 IPAddress = "192.168.1.12"
 #################################################
 
-Bulb = Bulb(IPAddress)
-
-arg = sys.argv[1]
-if arg == "pwr":
+if arg == "exec":
+    time.sleep(1)
+elif arg == "pwr":
     Power()
     exit()
 elif arg == "brplus":
