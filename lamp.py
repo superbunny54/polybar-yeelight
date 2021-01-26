@@ -12,10 +12,7 @@ def Get(argument):
     except BulbException:
         print("quota exceeded")
         exit()
-
-    while not prop:
-        time.sleep(0.1)
-
+    
     return (prop[argument])
 
 
