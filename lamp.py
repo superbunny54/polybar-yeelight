@@ -12,8 +12,10 @@ def Get(argument):
     except BulbException:
         print("quota exceeded")
         exit()
+
     while not prop:
         time.sleep(0.1)
+
     return (prop[argument])
 
 
@@ -76,10 +78,7 @@ def CtMinus():
 # Put the ip address of your lamp here ##########
 IPAddress = "192.168.1.12"
 #################################################
-
-if arg == "exec":
-    time.sleep(1)
-elif arg == "pwr":
+if arg == "pwr":
     Power()
     exit()
 elif arg == "brplus":
