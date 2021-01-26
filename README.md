@@ -7,7 +7,7 @@ A [Polybar](https://github.com/jaagr/polybar) module to control your [light](htt
 pip install yeelight
 ```
 
-*****Font NerdFont** - default icon font
+***Font NerdFont*** - default icon font
 
 ### Installation
 
