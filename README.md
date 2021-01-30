@@ -1,6 +1,7 @@
 # polybar-yeelight
 A [Polybar](https://github.com/jaagr/polybar) module to control your [Mi LED Desk Lamp](https://www.mi.com/global/smartlamp).
 May work with all [YeeLight](YeeLight) compatible lamp.
+<br>
 <img src="gif.gif" width="200">
 ### Dependencies 
 
