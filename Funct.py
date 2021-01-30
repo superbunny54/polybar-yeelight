@@ -5,11 +5,18 @@ import os
 from yeelight import *
 import time
 # Put the ip address of your lamp here
+
 IPAddress = "192.168.1.12"
 Bulb = Bulb(IPAddress)
 arg = sys.argv[1]
 
+
 ##########################################################################
+# This function write the state to a file for dynamic change in the bar.
+def State(msg):
+    File = open("/tmp/State","w")
+    File.write(msg)
+    
 # This function prevent multiple instance from runing at the same time.
 def File(state):
     if state == "Create" and not os.path.exists("/tmp/.checkrun"):
@@ -24,11 +31,11 @@ def Get(argument):
     try:
         prop = Bulb.get_properties()
     except BulbException:
-        print("quota exceeded")
+        print("error or quota exceeded")
         exit()
     finally:
-        time.sleep(0.2) # prevent to many request per second
-    return (prop[argument])
+        time.sleep(0.1) # prevent to many request per second
+    return prop[argument]
 
 
 ##########################################################################
@@ -37,9 +44,11 @@ def Power():
     pwr = Get("power")
     if pwr == "off":
         Bulb.turn_on(effect="smooth", duration=1000)
+        State("on")
+
     elif pwr == "on":
         Bulb.turn_off(effect="smooth", duration=1000)
-
+        State("off")
 
 # This function increase the brightness of your lamp 
 def BrPlus():

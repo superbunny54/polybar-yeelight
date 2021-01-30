@@ -2,32 +2,39 @@
 # -*- coding: utf-8 -*-
 from Funct import *
 import time
-if os.path.exists("/tmp/.checkrun"):
-    print("an instance is already running")
-    exit()
+try:
+    State = open("/tmp/State","r")
+except:
+    os.mknod("/tmp/State")
 
+
+
+if os.path.exists("/tmp/.checkrun"):
+    print("running")
 
 else:
+    print(State.read())
     try:
-        File("Create")
         if arg == "pwr":
-            Power()
-            exit()
+            File("Create")
+            out = Power()
 
         elif arg == "brplus":
+            File("Create")
             BrPlus()
-            exit()
 
         elif arg == "brminus":
+            File("Create")
             BrMinus()
-            exit()
 
         elif arg == "ctplus":
+            File("Create")
             CtPlus()
-            exit()
 
         elif arg == "ctminus":
+            File("Create")
             CtMinus()
-            exit()
+  
     finally:
-        File("Remove")
+        if os.path.exists("/tmp/.checkrun"):
+            File("Remove")
