@@ -36,7 +36,7 @@ label-padding = 1
 label-foreground = ${colors.foreground}
 
 exec = ~/.config/polybar/scripts/polybar-yeelight/lamp.py 
-click-left = ~/.config/p scripts [A]    olybar-yeelight/lamp.py pwr
+click-left = ~/.config/polybar/scripts/polybar-yeelight/lamp.py pwr
 scroll-up = ~/.config/polybar/scripts/polybar-yeelight/lamp.py brplus
 scroll-down = ~/.config/polybar/scripts/polybar-yeelight/lamp.py brminus
 ;scroll-up = ~/.config/polybar/scripts/polybar-yeelight/lamp.py ctplus
