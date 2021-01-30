@@ -20,7 +20,7 @@ wget https://raw.githubusercontent.com/superbunny54/polybar-yeelight/main/Funct.
 ```
 put your the ip address of your lamp in Funct.py
 ```sh
-chmod +x lamp.py
+chmod +x *.py
 ```
 
 ### Module
