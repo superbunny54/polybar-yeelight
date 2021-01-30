@@ -16,8 +16,9 @@ pip install yeelight
 ```sh
 cd ~/.config/polybar/scripts/polybar-yeelight/
 wget https://raw.githubusercontent.com/superbunny54/polybar-yeelight/main/lamp.py
+wget https://raw.githubusercontent.com/superbunny54/polybar-yeelight/main/Funct.py
 ```
-put your the ip address of your lamp in lamp.py
+put your the ip address of your lamp in Funct.py
 ```sh
 chmod +x lamp.py
 ```
